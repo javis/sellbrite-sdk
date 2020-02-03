@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Warehouses;
 
 use TrollAndToad\Sellbrite\Core\Core;

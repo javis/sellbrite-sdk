@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Core;
 
 use GuzzleHttp\Client;
@@ -25,9 +22,13 @@ abstract class Core implements ApiCallInterface
     protected $httpClient;
 
     /**
-     * @param ClientInterface
+     * Undocumented function
+     *
+     * @param string $accountToken
+     * @param string $secretKey
+     * @param ClientInterface|null $httpClient
      */
-    public function __construct(string $accountToken, string $secretKey, ?ClientInterface $httpClient = null)
+    public function __construct( $accountToken,  $secretKey, ClientInterface $httpClient = null)
     {
         // Base64 encode the username:password for Basic HTTP Authentication
         $auth = \base64_encode($accountToken . ':' . $secretKey);

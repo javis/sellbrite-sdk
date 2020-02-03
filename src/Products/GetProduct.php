@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Products;
 
 use TrollAndToad\Sellbrite\Core\Core;
@@ -17,8 +14,8 @@ class GetProduct extends Core
      * @param array   $skuArr An array of SKUs
      */
     public function sendRequest(
-        int $page = null,
-        int $limit = null,
+        $page = null,
+        $limit = null,
         array $skuArr = []
     ) {
         // Build the API endpoint

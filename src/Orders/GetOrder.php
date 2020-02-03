@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Orders;
 
 use TrollAndToad\Sellbrite\Core\Core;
@@ -13,7 +10,7 @@ class GetOrder extends Core
      *
      * @return string
      */
-    public function sendRequest(string $sb_order_seq = null) {
+    public function sendRequest($sb_order_seq = null) {
 
         if (is_null($sb_order_seq) === true)
             throw new \Exception('You failed to supply a Sellbrite Order Sequence number.');

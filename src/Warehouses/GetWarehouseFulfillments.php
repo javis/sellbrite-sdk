@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Warehouses;
 
 use TrollAndToad\Sellbrite\Core\Core;
@@ -26,14 +23,14 @@ class GetWarehouseFulfillments extends Core
      * @return object|string
      */
     public function sendRequest(
-        string $warehouseUuid = null,
-        int $page = null,
-        int $limit = null,
-        string $min_ordered_at = null,
-        string $max_ordered_at = null,
-        string $sb_status = null,
-        string $sb_payment_status = null,
-        string $shipment_status = null
+        $warehouseUuid = null,
+        $page = null,
+        $limit = null,
+        $min_ordered_at = null,
+        $max_ordered_at = null,
+        $sb_status = null,
+        $sb_payment_status = null,
+        $shipment_status = null
     ) {
         if (is_null($warehouseUuid) === true || empty($warehouseUuid) === true)
             throw new \Exception('You have to supply a warehouse uuid for this API request');

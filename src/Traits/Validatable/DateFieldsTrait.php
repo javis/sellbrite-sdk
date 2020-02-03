@@ -1,14 +1,11 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Traits\Validatable;
 
 use Carbon\Carbon;
 
 trait DateFieldsTrait
 {
-    private function isDateValid(string $dateField)
+    private function isDateValid($dateField)
     {
         try {
             Carbon::parse($dateField);

@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Inventory;
 
 use TrollAndToad\Sellbrite\Core\Core;
@@ -24,14 +21,14 @@ class GetAllInventory extends Core
      * @return object|string
      */
     public function sendRequest(
-        int $page = null,
-        int $limit = null,
-        string $warehouse_uuid = null,
-        string $sku = null,
-        string $created_at_min = null,
-        string $created_at_max = null,
-        string $updated_at_min = null,
-        string $updated_at_max = null
+        $page = null,
+        $limit = null,
+        $warehouse_uuid = null,
+        $sku = null,
+        $created_at_min = null,
+        $created_at_max = null,
+        $updated_at_min = null,
+        $updated_at_max = null
     ) {
         // Build the API endpoint
         $url = self::BASE_URI . 'inventory';

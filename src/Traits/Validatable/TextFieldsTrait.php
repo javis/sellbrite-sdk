@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Traits\Validatable;
 
 trait TextFieldsTrait
@@ -9,7 +6,7 @@ trait TextFieldsTrait
     /**
      * @return boolean
      */
-    private function isTextFieldValid(string $textField)
+    private function isTextFieldValid($textField)
     {
         switch ($textField)
         {

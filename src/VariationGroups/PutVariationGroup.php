@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\VariationGroups;
 
 use TrollAndToad\Sellbrite\Core\Core;
@@ -20,11 +17,11 @@ class PutVariationGroup extends Core
      * @param array   $images Array of image URLs
      */
     public function sendRequest(
-        string $sku = null,
-        string $name = null,
+        $sku = null,
+        $name = null,
         array $childSKUs = array(),
         array $variationAttr = array(),
-        string $description = null,
+        $description = null,
         array $images = array()
     ) {
         if (is_null($sku) === true || empty($sku) === true || is_string($sku) === false)

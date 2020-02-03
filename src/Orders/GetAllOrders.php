@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Orders;
 
 use TrollAndToad\Sellbrite\Core\Core;
@@ -25,13 +22,13 @@ class GetAllOrders extends Core
      * @return object|string
      */
     public function sendRequest(
-        int $page = null,
-        int $limit = null,
-        string $min_ordered_at = null,
-        string $max_ordered_at = null,
-        string $sb_status = null,
-        string $sb_payment_status = null,
-        string $shipment_status = null
+        $page = null,
+        $limit = null,
+        $min_ordered_at = null,
+        $max_ordered_at = null,
+        $sb_status = null,
+        $sb_payment_status = null,
+        $shipment_status = null
     ) {
         // Build the API endpoint
         $url = self::BASE_URI . 'orders';

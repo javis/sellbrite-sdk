@@ -1,7 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
 namespace TrollAndToad\Sellbrite\Warehouses;
 
 use TrollAndToad\Sellbrite\Core\Core;
@@ -9,9 +6,13 @@ use TrollAndToad\Sellbrite\Core\Core;
 class PutWarehouse extends Core
 {
     /**
+     * Undocumented function
+     *
+     * @param string $warehouseUuid
      * @param array $warehouseInfoArr Array that holds all the information for the associated warehouse
+     * @return void
      */
-    public function sendRequest(string $warehouseUuid = null, array $warehouseInfoArr = null)
+    public function sendRequest($warehouseUuid = null, array $warehouseInfoArr = null)
     {
         if (is_null($warehouseUuid) === true || empty($warehouseUuid) === true)
             throw new \Exception('You have to supply a warehouse uuid for this API request');
